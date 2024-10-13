@@ -1,0 +1,123 @@
+/* Weather Header */
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  z-index: 10;
+}
+
+.weather-header h2 {
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.country-flag {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  z-index: 10; /* Ensures the flag is on top of background */
+  position: relative; /* Flag needs to be positioned relative to container */
+}
+
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+/* Weather card styling */
+.weather-info {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  animation: fadeIn 1s ease-in;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.table td img {
+  width: 30px; /* Adjust size as needed */
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Search form styling */
+.search-form {
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+}
+
+/* Error message */
+.error-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+}
+
